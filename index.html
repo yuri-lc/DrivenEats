@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <!---Fonte google-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+  <!---Fonte google-->  
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="reset.css" />
+</head>
+<body>
+  <!-- Barra Topo -->
+  <div class="topo">
+    <div class="textotopo">
+      <p>DrivenEats</p>
+      <div class="subtopo">
+        <p>Sua comida em 6 minutos</p>
+      </div>
+      
+    </div>
+  </div>
+  <!-- Barra Topo -->
+
+  <div class="telaDeConfirmacao escondido" id="telaDeConfirmacao"> 
+    <div class="infoTC" >
+      <div class="txtTC">Confirme seu pedido</div>
+      <div class="txtTCInfo" id="refe">Prato Escolhido com o valor</div>
+      <div class="txtTCInfo" id="bebe">Prato Escolhido com o valor</div>
+      <div class="txtTCInfo" id="doc">Prato Escolhido com o valor</div>
+      <div class="txtTCInfo" id="fechandoConta">Total</div>
+      <div class="tudoCerto" onclick="mensagemFinal(this)" id="tudoCerto">Tudo certo, pode pedir!</div>
+      <div onclick="cancelarPedido(this)" class="cancelar" id="cancelar">Cancelar</div>
+    </div>
+    
+  </div>
+  <div class="barrarefeicoes"> Primeiro, seu prato</div>
+  <!-- Comidas -->
+  <div class="conteiner ">
+    <div class="caixa-calabresa" onclick="selecionarComida(this)">
+      <div class="imag_ref">
+        <img src="projeto__driven-eats__imagens/projeto__driven-eats__imagens/pf_calabresa.png" alt="">
+        <p class="nome_prato Calabresa">Calabresa</p>
+        <div class="text_descr">arroz,feijão,batata e calabresa</div>
+        <div class="valor" id="reais">14.90</div>
+      </div>
+    </div>
+
+    <div class="caixa-carne" onclick="selecionarComida(this)">
+      <div class="imag_ref">
+        <img src="projeto__driven-eats__imagens/projeto__driven-eats__imagens/pf_carne.jpg" alt="">
+        <div class="nome_prato" >Carne</div>
+        <div class="text_descr">arroz,feijão,batata e carne</div>
+        <div class="valor" id="reais">16.90</div>
+      </div>
+    </div>
+
+    <div class="caixa-frango" onclick="selecionarComida(this)">
+      <div class="imag_ref">
+        <img src="projeto__driven-eats__imagens/projeto__driven-eats__imagens/pf_frango.jpg" alt="">
+        <div class="nome_prato">Frango</div>
+        <div class="text_descr">arroz,feijão,batata e frango</div>
+        <div class="valor" id="reais">10.90</div>
+      </div>
+    </div>
+  </div>
+  <!-- Comidas -->
+   
+  <div class="barrabebidas">Agora, sua bebida</div>
+  <!-- Bebidas -->
+  <div class="conteiner2 ">
+  
+    <div class="caixa-coca" onclick="selecionarBebida(this)">
+      <div class="imag_ref">
+        <img src="projeto__driven-eats__imagens/projeto__driven-eats__imagens/coca.png" alt="">
+        <div class="nome_bebida" id="Coca">Coca</div>
+        <div class="text_descr">350ml</div>
+        <div class="valor" id="reais">3.50</div>
+      </div>
+    </div>
+
+    <div class="caixa-fanta" onclick="selecionarBebida(this)">
+      <div class="imag_ref">
+        <img src="projeto__driven-eats__imagens/projeto__driven-eats__imagens/fanta.png" alt="">
+        <div class="nome_bebida" id="Fanta">Fanta</div>
+        <div class="text_descr">350ml</div>
+        <div class="valor" id="reais">2.50</div>
+      </div>
+    </div>
+
+    <div class="caixa-suco" onclick="selecionarBebida(this)">
+      <div class="imag_ref">
+        <img src="projeto__driven-eats__imagens/projeto__driven-eats__imagens/suco.png" alt="">
+        <div class="nome_bebida" id="Suco Natural">Suco Natural</div>
+        <div class="text_descr">Laranja, Morango, Abacaxi e Acerola</div>
+        <div class="valor" id="reais">6.50</div>
+      </div>
+    </div>
+  </div>
+  <!-- Bebidas -->
+
+  <div class="barradoces">Por fim, sua sobremesa</div>
+  <!-- Doces -->
+  <div class="conteiner3 ">
+    <div class="caixa-brownie" onclick="selecionarDoce(this)">
+      <div class="imag_ref">
+        <img src="projeto__driven-eats__imagens/projeto__driven-eats__imagens/brownie.jpg" alt="">
+        <div class="nome_doce" id="Brownie">Brownie</div>
+        <div class="text_descr">Apenas brownie</div>
+        <div class="valor" id="reais">3.20</div>
+      </div>
+    </div>
+
+    <div class="caixa-pudim " onclick="selecionarDoce(this)">
+      <div class="imag_ref">
+        <img src="projeto__driven-eats__imagens/projeto__driven-eats__imagens/pudim.jpg" alt="">
+        <div class="nome_doce" id="Pudim">Pudim</div>
+        <div class="text_descr">Apenas Pudim</div>
+        <div class="valor" id="reais">2.00</div>
+      </div>
+    </div>
+
+    <div class="caixa-mouse " onclick="selecionarDoce(this)">
+      <div class="imag_ref">
+        <img src="projeto__driven-eats__imagens/projeto__driven-eats__imagens/mouse.jpg" alt="">
+        <div class="nome_doce" id="Mouse">Mouse</div>
+        <div class="text_descr">Apenas Mouse</div>
+        <div class="valor" id="reais">1.50</div>
+      </div>
+    </div>
+  </div>
+  <!-- Doces -->
+    
+
+  <!-- Botão Finalizar Pedido -->
+  <div class="conteinerbotao ">
+    <button onclick="fazerPedido(this)" class="botaofp"> 
+      <div class="textobotao"> Selecione os 3 itens para fechar o pedido </div>
+    </button>
+  </div>
+  <!-- Botão Finalizar Pedido -->
+
+
+   <script src="prog.js"></script>
+</body>
+</html>
